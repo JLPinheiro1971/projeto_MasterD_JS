@@ -13,13 +13,15 @@
   <title>Projeto2</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 
-<body>
+<body id="home">
+
+  <!-- Cabeçalho -->
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top cabecalho">
       <a class="navbar-brand" href="#">Logo</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,54 +30,64 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Página Inicial</a>
+            <a class="nav-link" href="#home">Página Inicial</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sobre</a>
+            <a class="nav-link" href="#news">Notícias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Serviços</a>
+            <a class="nav-link" href="#portfolio">Portfólio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contato</a>
+            <a class="nav-link" href="#budget">Orçamento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacts">Contato</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <aside class="mt-5">
+  <!-- Menu Lateral -->
 
-    <h3 class="mt-5">Notícias RSS</h3>
+  <aside class="menu-lateral" id="news">
+    <br><br><h2>Notícias RSS</h2>
     <ul id="noticias-lista"></ul>
 
   </aside>
 
-  <main>
+  <!-- Seção Principal -->
 
-    <section class="portfolio">
-      <!-- Galeria de Portfólio -->
-      <h1>Portfólio</h1>
+  <main class="principal">
 
-    <div>
+    <!-- Seção de Galeria de Portfólios -->
+
+    <section class="portfolio" id="portfolio">
+      <br><br><h1 class="ml-3">Portfólio</h1>
+      <div>
+        
         <a href="images/site1.jpg" data-lightbox="minha-galeria" data-title="Imagem 1">
-            <img src="images/site1thumb.jpg" alt="Imagem 1">
+          <img src="images/site1thumb.jpg" alt="Imagem 1">
         </a>
         <a href="images/site2.jpg" data-lightbox="minha-galeria" data-title="Imagem 2">
-            <img src="images/site2thumb.jpg" alt="Imagem 2">
+          <img src="images/site2thumb.jpg" alt="Imagem 2">
         </a>
         <a href="images/site3.jpg" data-lightbox="minha-galeria" data-title="Imagem 3">
-            <img src="images/site3thumb.jpg" alt="Imagem 3">
+          <img src="images/site3thumb.jpg" alt="Imagem 3">
         </a>
         <a href="images/site4.jpg" data-lightbox="minha-galeria" data-title="Imagem 4">
-            <img src="images/site4thumb.jpg" alt="Imagem 4">
+          <img src="images/site4thumb.jpg" alt="Imagem 4">
         </a>
-    </div>
+      </div>
     </section>
 
-    <section class="budget">
-      <!-- Formulário de Pedido de Orçamento -->
+    <!-- Seção de Pedido de Orçamento -->
+
+    <section class="budget" id="budget">
+      <h1>Orçamento do Projeto</h1>
       <form>
+
         <h2>Dados</h2>
         <div class="row mb-3">
           <label for="inputName" class="col-sm-2 col-form-label">Nome</label>
@@ -95,15 +107,18 @@
             <input type="tel" class="form-control" id="inputPhone3">
           </div>
         </div>
+
         <h2>Pedido de orçamento</h2>
         <div class="row mb-3">
           <label for="autoSizingSelect" class="col-sm-2 col-form-label">Tipo de página web:</label>
           <div class="col-sm-10">
             <select class="form-select" id="autoSizingSelect">
-              <option selected>Choose...</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option selected>Escolha o tipo de site</option>
+              <option value="1">Subsite em domínio de terceiros</option>
+              <option value="2">Site Estático - até 3 páginas</option>
+              <option value="3">Site Dinâmico - até 7 páginas</option>
+              <option value="2">Sistema de Gestão de Conteúdo</option>
+              <option value="3">Loja Virtual</option>
             </select>
           </div>
         </div>
@@ -118,37 +133,37 @@
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="opcao1" name="opcao1">
-            <label class="form-check-label" for="opcao1">Opção 1</label>
+            <label class="form-check-label" for="opcao1">Quem somos</label>
           </div>
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="opcao2" name="opcao2">
-            <label class="form-check-label" for="opcao2">Opção 2</label>
+            <label class="form-check-label" for="opcao2">Onde estamos</label>
           </div>
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="opcao3" name="opcao3">
-            <label class="form-check-label" for="opcao3">Opção 3</label>
+            <label class="form-check-label" for="opcao3">Galeria de fotografias</label>
           </div>
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="opcao4" name="opcao4">
-            <label class="form-check-label" for="opcao4">Opção 4</label>
+            <label class="form-check-label" for="opcao4">eCommerce</label>
           </div>
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="opcao5" name="opcao5">
-            <label class="form-check-label" for="opcao5">Opção 5</label>
+            <label class="form-check-label" for="opcao5">Gestão Interna</label>
           </div>
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="opcao6" name="opcao6">
-            <label class="form-check-label" for="opcao6">Opção 6</label>
+            <label class="form-check-label" for="opcao6">Notícias</label>
           </div>
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="opcao7" name="opcao7">
-            <label class="form-check-label" for="opcao5">Opção 7</label>
+            <label class="form-check-label" for="opcao5">Redes Sociais</label>
           </div>
 
         </div>
@@ -156,31 +171,66 @@
         <div class="row mb-3">
           <label for="inputName">É um valor meramente indicativo, pode sofrer alterações</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputName3">
+            <input type="text" class="form-control mb-5" id="inputName3">
           </div>
         </div>
       </form>
     </section>
 
-    <section class="contacts">
-      <!-- Mapa e formulário de Contactos -->
+    <!-- Seção Contactos -->
+
+    <section class="contacts" id="contacts">
+      <!-- Mapa -->
+      <h1>Contato</h1>
+
       <div id="map">
-        <h1>Mapa do Escritório</h1>
-        <a href="#" onclick="obterCoordenadas()">Visit W3Schools.com!</a> <br> <br>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQKOWG8gzDHrPamVg-4KgzviGVcdasSc&callback=initMap"></script>
-        <form id="contact-form">
-          
-          <p>Formulário do Contato</p>
-          <!-- Campos do formulário -->
-        </form>
+        <h2>Mapa do Escritório</h2>
+        <img src="images/maps.jfif" alt="Imagem provisória">
+      </div><br>
+      <!-- Formulário de Contato-->
+      <div id="fale_conosco">
+      <h2>Fale Conosco</h2>
+      <form>
+        <label for="nome">Nome:</label> <br>
+        <input type="text class" class="form-control" name="Nome" id="nome" class="imputuser" required> <br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" class="form-control" name="email" id="email" class="imputuser" required><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" class="form-control" name="telefone" id="telefone" class="imputuser" required> <br>
+        <label for="mensagem">Mensagem</label> <br>
+        <textarea type="text" class="form-control" name="mensagem" id="mensagem" class="imputuser"
+          required></textarea><br>
+
+        <button class="btn btn-outline-dark bg-info" type="submit">Enviar</button>
+
+      </form>
+    </div>
+
     </section>
   </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="sociais">
+      <button><a href="https://www.instagram.com/bkttlapa/"><i class="fa-brands fa-instagram"></i></a></button>
+      <button><a href="https://twitter.com/bkttlapa"><i class="fa-brands fa-x-twitter"></i></a></button>
+      <button><a href="https://www.youtube.com/@BKttlapa"><i class="fa-brands fa-youtube"></i></a></button>
+    </div>
+
+    <div class="fs-2 text-white">
+      <p class="rodape-criador">Desenvolvido por William Pinheiro</p>
+    </div>
+
+
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 
 </html>

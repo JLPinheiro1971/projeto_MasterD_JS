@@ -4,17 +4,61 @@
     --cor-primaria: rgb(52, 44, 102);
     --cor-secundaria: rgb(90, 172, 205);
     --cor-terciaria: #ce8b8b;
+    --cor-quaternaria: #292323;
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer"
 }
 
+/* Classes de estilos para cada bloco do Grid */
+.cabecalho{
+grid-area: header;
+}
+
+.menu-lateral{
+    grid-area: aside;
+    background-color: var(--cor-secundaria);
+}
+
+.principal {
+    grid-area: main;    
+}
+
+.rodape{
+    grid-area: footer;
+    background-color: var(--cor-quaternaria);
+    color:aliceblue;
+    text-align: center;
+}
+
+.portfolio {
+    /* Estilos para a galeria de portfólio */
+    background-color: var(--cor-terciaria);
+    color: black;
+}
+
+.budget {
+    /* Estilos para o formulário de orçamento */
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.contacts {
+    /* Estilos para a página de contactos */
+    background-color: var(--cor-terciaria);
+}
+
+/* Estilos para o Menu importas do Bootstrap*/
+
 header {
-    position: fixed;
-    top: 0;
     width: 100%;
 }
 
@@ -34,23 +78,7 @@ nav a {
     color: blueviolet;
 }
 
-/* Estilos específicos para cada seção */
-
-.portfolio {
-    /* Estilos para a galeria de portfólio */
-    background-color: var(--cor-terciaria);
-}
-
-.budget {
-    /* Estilos para o formulário de orçamento */
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
-}
-
-.contacts {
-    /* Estilos para a página de contactos */
-    background-color: var(--cor-secundaria);
-}
+/* Estilos específicos para funcionalidades de API externos*/
 
 #caixa {
     width: 100%;
