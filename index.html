@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto2</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQKOWG8gzDHrPamVg-4KgzviGVcdasSc"></script>
+  <title>Projeto2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Página Inicial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="mt-5">
+
+    <h3 class="mt-5">Notícias RSS</h3>
+    <ul id="noticias-lista"></ul>
+
+  </aside>
+
+  <main>
+
+    <section class="portfolio">
+      <!-- Galeria de Portfólio -->
+      <h1>Portfólio</h1>
+
+    <div>
+        <a href="images/site1.jpg" data-lightbox="minha-galeria" data-title="Imagem 1">
+            <img src="images/site1thumb.jpg" alt="Imagem 1">
+        </a>
+        <a href="images/site2.jpg" data-lightbox="minha-galeria" data-title="Imagem 2">
+            <img src="images/site2thumb.jpg" alt="Imagem 2">
+        </a>
+        <a href="images/site3.jpg" data-lightbox="minha-galeria" data-title="Imagem 3">
+            <img src="images/site3thumb.jpg" alt="Imagem 3">
+        </a>
+        <a href="images/site4.jpg" data-lightbox="minha-galeria" data-title="Imagem 4">
+            <img src="images/site4thumb.jpg" alt="Imagem 4">
+        </a>
+    </div>
+    </section>
+
+    <section class="budget">
+      <!-- Formulário de Pedido de Orçamento -->
+      <form>
+        <h2>Dados</h2>
+        <div class="row mb-3">
+          <label for="inputName" class="col-sm-2 col-form-label">Nome</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputName3">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputSurname" class="col-sm-2 col-form-label">Apelido</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputSurname3">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPhone" class="col-sm-2 col-form-label">Telemóvel</label>
+          <div class="col-sm-10">
+            <input type="tel" class="form-control" id="inputPhone3">
+          </div>
+        </div>
+        <h2>Pedido de orçamento</h2>
+        <div class="row mb-3">
+          <label for="autoSizingSelect" class="col-sm-2 col-form-label">Tipo de página web:</label>
+          <div class="col-sm-10">
+            <select class="form-select" id="autoSizingSelect">
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPhone" class="col-sm-2 col-form-label">Prazo em meses:</label>
+          <div class="col-sm-10">
+            <input type="tel" class="form-control" id="inputPhone3">
+          </div>
+        </div>
+        <h2>Marque os separadores necessários:</h2>
+        <div class="container mt-5">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="opcao1" name="opcao1">
+            <label class="form-check-label" for="opcao1">Opção 1</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="opcao2" name="opcao2">
+            <label class="form-check-label" for="opcao2">Opção 2</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="opcao3" name="opcao3">
+            <label class="form-check-label" for="opcao3">Opção 3</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="opcao4" name="opcao4">
+            <label class="form-check-label" for="opcao4">Opção 4</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="opcao5" name="opcao5">
+            <label class="form-check-label" for="opcao5">Opção 5</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="opcao6" name="opcao6">
+            <label class="form-check-label" for="opcao6">Opção 6</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="opcao7" name="opcao7">
+            <label class="form-check-label" for="opcao5">Opção 7</label>
+          </div>
+
+        </div>
+        <h2>Orçamento estimado</h2>
+        <div class="row mb-3">
+          <label for="inputName">É um valor meramente indicativo, pode sofrer alterações</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputName3">
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="contacts">
+      <!-- Mapa e formulário de Contactos -->
+      <div id="map">
+        <h1>Mapa do Escritório</h1>
+        <a href="#" onclick="obterCoordenadas()">Visit W3Schools.com!</a> <br> <br>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQKOWG8gzDHrPamVg-4KgzviGVcdasSc&callback=initMap"></script>
+        <form id="contact-form">
+          
+          <p>Formulário do Contato</p>
+          <!-- Campos do formulário -->
+        </form>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+/* Estilos gerais */
+
+:root {
+    --cor-primaria: rgb(52, 44, 102);
+    --cor-secundaria: rgb(90, 172, 205);
+    --cor-terciaria: #ce8b8b;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+/* Estilos específicos para cada seção */
+
+.portfolio {
+    /* Estilos para a galeria de portfólio */
+    background-color: var(--cor-terciaria);
+}
+
+.budget {
+    /* Estilos para o formulário de orçamento */
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.contacts {
+    /* Estilos para a página de contactos */
+    background-color: var(--cor-secundaria);
+}
+
+#caixa {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border: 1px solid cadetblue;
+}
+
+#map {
+    height: 200px;
+    width: 50%;    
+}
