@@ -1,82 +1,108 @@
 /* Estilos gerais */
 
 :root {
-    --cor-primaria: rgb(52, 44, 102);
-    --cor-secundaria: rgb(90, 172, 205);
-    --cor-terciaria: #ce8b8b;
-    --cor-quaternaria: #292323;
+    --cor-01: #1d090e;
+    --cor-02: #612a36;
+    --cor-03: #271f9c;
+    --cor-04: #20dad5;
+    --cor-05: #e8efeb;
 }
 
 body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: "auto auto 1fr";
+    grid-template-areas: "cabecalho cabecalho" "principal principal" "rodape rodape";
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "aside main"
-    "footer footer"
+    padding: 0;    
 }
 
-/* Classes de estilos para cada bloco do Grid */
-.cabecalho{
-grid-area: header;
-}
-
-.menu-lateral{
-    grid-area: aside;
-    background-color: var(--cor-secundaria);
-}
-
-.principal {
-    grid-area: main;    
-}
-
-.rodape{
-    grid-area: footer;
-    background-color: var(--cor-quaternaria);
-    color:aliceblue;
-    text-align: center;
-}
-
-.portfolio {
-    /* Estilos para a galeria de portfólio */
-    background-color: var(--cor-terciaria);
-    color: black;
-}
-
-.budget {
-    /* Estilos para o formulário de orçamento */
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
-}
-
-.contacts {
-    /* Estilos para a página de contactos */
-    background-color: var(--cor-terciaria);
-}
-
-/* Estilos para o Menu importas do Bootstrap*/
+/* Estilos para o Menu*/
 
 header {
-    width: 100%;
+    width: 100%;    
 }
+
+nav{
+    background-color: var(--cor-01);    
+    }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    text-align: left;
 }
 
 nav li {
     margin-right: 20px;
+    
 }
 
 nav a {
-    text-decoration: none;
-    color: blueviolet;
+    text-decoration:none;
+    font-size: 24px;
+    color: var(--cor-05);
 }
+
+
+/* Classes de estilos para cada bloco do Grid */
+.cabecalho{
+grid-area: header;
+}
+
+.noticia{
+    grid-area: noticia;
+    background-color: var(--cor-02);
+}
+
+.noticia a{
+    
+    color: var(--cor-04);
+}
+
+.principal {
+    grid-area: principal;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;    
+    grid-template-areas: "noticia portfolio" "noticia orcamento" "noticia contato";
+}
+
+footer {
+    grid-area: rodape;
+    background-color: var(--cor-01);
+    width: 100%;
+    font-size: 24px;
+}
+
+footer p {
+    color: var(--cor-05);
+    text-align: center;
+}
+
+/* Estilos para a galeria de portfólio */
+.portfolio {    
+    grid-area: portfolio;
+    background-color: var(--cor-05);
+    color: var(--cor-03):
+}
+
+/* Estilos para o formulário de orçamento */
+.orcamento {
+    grid-area: orcamento;
+    background-color: var(--cor-03);
+    color: var(--cor-04);
+}
+
+/* Estilos para a página de contactos */
+.contato {
+    grid-area: contato;
+    background-color: var(--cor-04);
+}
+
 
 /* Estilos específicos para funcionalidades de API externos*/
 

@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projeto2</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/responsivo.css">
   <script src="scripts/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQKOWG8gzDHrPamVg-4KgzviGVcdasSc"></script>
@@ -21,209 +22,200 @@
   <!-- Cabeçalho -->
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top cabecalho">
-      <a class="navbar-brand" href="#">Logo</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home">Página Inicial</a>
+    <nav class="fixed-top cabecalho">
+      <div>
+        <ul>
+          <li>
+            <a href="#home">Página Inicial</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#news">Notícias</a>
+          <li>
+            <a href="#noticia">Notícias</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Portfólio</a>
+          <li>
+            <a href="#portfolio">Portfólio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#budget">Orçamento</a>
+          <li>
+            <a href="#orcamento">Orçamento</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contacts">Contato</a>
+          <li>
+            <a href="#contacto">Contato</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <!-- Menu Lateral -->
-
-  <aside class="menu-lateral" id="news">
-    <br><br><h2>Notícias RSS</h2>
-    <ul id="noticias-lista"></ul>
-
-  </aside>
-
   <!-- Seção Principal -->
 
   <main class="principal">
 
-    <!-- Seção de Galeria de Portfólios -->
+    <!-- Menu Lateral -->
 
-    <section class="portfolio" id="portfolio">
-      <br><br><h1 class="ml-3">Portfólio</h1>
-      <div>
-        
-        <a href="images/site1.jpg" data-lightbox="minha-galeria" data-title="Imagem 1">
-          <img src="images/site1thumb.jpg" alt="Imagem 1">
-        </a>
-        <a href="images/site2.jpg" data-lightbox="minha-galeria" data-title="Imagem 2">
-          <img src="images/site2thumb.jpg" alt="Imagem 2">
-        </a>
-        <a href="images/site3.jpg" data-lightbox="minha-galeria" data-title="Imagem 3">
-          <img src="images/site3thumb.jpg" alt="Imagem 3">
-        </a>
-        <a href="images/site4.jpg" data-lightbox="minha-galeria" data-title="Imagem 4">
-          <img src="images/site4thumb.jpg" alt="Imagem 4">
-        </a>
-      </div>
-    </section>
+    <aside class="noticia" id="noticia">
+      <br><br>
+      <h1>Notícias</h1>
+      <ul id="noticias-lista"></ul>
 
-    <!-- Seção de Pedido de Orçamento -->
+    </aside>
 
-    <section class="budget" id="budget">
-      <h1>Orçamento do Projeto</h1>
-      <form>
+    <!-- Div Central, que engloba as 3 seções do miolo da estrutura -->
 
-        <h2>Dados</h2>
-        <div class="row mb-3">
-          <label for="inputName" class="col-sm-2 col-form-label">Nome</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputName3">
-          </div>
+    <div class="central">
+
+      <!-- Seção de Galeria de Portfólios -->
+      <section class="portfolio" id="portfolio">
+        <br><br>
+        <h1 class="ml-3">Portfólio</h1>
+        <div>
+
+          <a href="images/site1.jpg" data-lightbox="minha-galeria" data-title="Imagem 1">
+            <img src="images/site1thumb.jpg" alt="Imagem 1">
+          </a>
+          <a href="images/site2.jpg" data-lightbox="minha-galeria" data-title="Imagem 2">
+            <img src="images/site2thumb.jpg" alt="Imagem 2">
+          </a>
+          <a href="images/site3.jpg" data-lightbox="minha-galeria" data-title="Imagem 3">
+            <img src="images/site3thumb.jpg" alt="Imagem 3">
+          </a>
+          <a href="images/site4.jpg" data-lightbox="minha-galeria" data-title="Imagem 4">
+            <img src="images/site4thumb.jpg" alt="Imagem 4">
+          </a>
         </div>
-        <div class="row mb-3">
-          <label for="inputSurname" class="col-sm-2 col-form-label">Apelido</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputSurname3">
+      </section>
+
+      <!-- Seção de Pedido de Orçamento -->
+
+      <section class="orcamento" id="orcamento">
+        <h1>Orçamento do Projeto</h1>
+        <form>
+          <h2>Dados</h2>
+          <div class="row mb-3">
+            <label for="inputName" class="col-sm-2 col-form-label">Nome</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputName3">
+            </div>
           </div>
+          <div class="row mb-3">
+            <label for="inputSurname" class="col-sm-2 col-form-label">Apelido</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputSurname3">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPhone" class="col-sm-2 col-form-label">Telemóvel</label>
+            <div class="col-sm-10">
+              <input type="tel" class="form-control" id="inputPhone3">
+            </div>
+          </div>
+
+          <h2>Pedido de orçamento</h2>
+          <div class="row mb-3">
+            <label for="inputTiposite" class="col-sm-2 col-form-label">Tipo de página web:</label>
+            <div class="col-sm-10">
+              <select class="form-select" name="inputTipoSite" id="inputTipoSite">
+                <option selected>Escolha o tipo de site</option>
+                <option value="100">Subsite em domínio de terceiros - 100€</option>
+                <option value="200">Site Estático - até 3 páginas  - 200€</option>
+                <option value="300">Site Dinâmico - até 7 páginas  - 300€</option>
+                <option value="500">Sistema de Gestão de Conteúdo  - 500€</option>
+                <option value="1000">Loja Virtual  - 1000€</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+                        <label for="inputPrazo" class="col-sm-2 col-form-label">Prazo em meses:</label>
+            <div class="col-sm-10">
+              <input type="tel" class="form-control" name="inputPrazo" id="inputPrazo">
+            </div>
+            <p>Prazo normal, sem desconto: 1 mês. Atenção: Será concedido 5% de desconto para cada mês extra, até o total de 20% de desconto.</p>
+          </div>
+          <h2>Marque os itens necessários:</h2>
+          <div class="container mt-5">
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="opcao1" name="opcao1">
+              <label class="form-check-label" for="opcao1">Quem somos</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="opcao2" name="opcao2">
+              <label class="form-check-label" for="opcao2">Onde estamos</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="opcao3" name="opcao3">
+              <label class="form-check-label" for="opcao3">Galeria de fotografias</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="opcao4" name="opcao4">
+              <label class="form-check-label" for="opcao4">eCommerce</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="opcao5" name="opcao5">
+              <label class="form-check-label" for="opcao5">Gestão Interna</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="opcao6" name="opcao6">
+              <label class="form-check-label" for="opcao6">Notícias</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="opcao7" name="opcao7">
+              <label class="form-check-label" for="opcao5">Redes Sociais</label>
+            </div>
+            <p>Será acrescentado 400 € para cada item necessário.</p>
+          </div>
+          <h2>Orçamento estimado</h2>
+          <div class="row mb-3">
+            <label for="inputName">É um valor meramente indicativo, pode sofrer alterações</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control mb-5" id="inputName3">
+            </div>
+          </div>
+          <input type="submit" value="Soma" onclick="exibirAlertaSimples();" />
+        </form>
+      </section>
+
+      <!-- Seção Contactos -->
+
+      <section class="contato" id="contato">
+        <!-- Mapa -->
+        <h1>Contato</h1>
+
+        <div id="map">
+          <h2>Mapa do Escritório</h2>
+          <img src="images/maps.jfif" alt="Imagem provisória">
+        </div><br>
+        <!-- Formulário de Contato-->
+        <div id="fale_conosco">
+          <h2>Fale Conosco</h2>
+          <form>
+            <label for="nome">Nome:</label> <br>
+            <input type="text class" class="form-control" name="Nome" id="nome" required> <br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" class="form-control" name="email" id="email" required><br>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" class="form-control" name="telefone" id="telefone" required> <br>
+            <label for="mensagem">Mensagem</label> <br>
+            <textarea type="text" class="form-control" name="mensagem" id="mensagem" required></textarea><br>
+
+            <button class="btn btn-outline-dark bg-info" type="submit">Enviar</button>
+
+          </form>
         </div>
-        <div class="row mb-3">
-          <label for="inputPhone" class="col-sm-2 col-form-label">Telemóvel</label>
-          <div class="col-sm-10">
-            <input type="tel" class="form-control" id="inputPhone3">
-          </div>
-        </div>
 
-        <h2>Pedido de orçamento</h2>
-        <div class="row mb-3">
-          <label for="autoSizingSelect" class="col-sm-2 col-form-label">Tipo de página web:</label>
-          <div class="col-sm-10">
-            <select class="form-select" id="autoSizingSelect">
-              <option selected>Escolha o tipo de site</option>
-              <option value="1">Subsite em domínio de terceiros</option>
-              <option value="2">Site Estático - até 3 páginas</option>
-              <option value="3">Site Dinâmico - até 7 páginas</option>
-              <option value="2">Sistema de Gestão de Conteúdo</option>
-              <option value="3">Loja Virtual</option>
-            </select>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <label for="inputPhone" class="col-sm-2 col-form-label">Prazo em meses:</label>
-          <div class="col-sm-10">
-            <input type="tel" class="form-control" id="inputPhone3">
-          </div>
-        </div>
-        <h2>Marque os separadores necessários:</h2>
-        <div class="container mt-5">
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="opcao1" name="opcao1">
-            <label class="form-check-label" for="opcao1">Quem somos</label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="opcao2" name="opcao2">
-            <label class="form-check-label" for="opcao2">Onde estamos</label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="opcao3" name="opcao3">
-            <label class="form-check-label" for="opcao3">Galeria de fotografias</label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="opcao4" name="opcao4">
-            <label class="form-check-label" for="opcao4">eCommerce</label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="opcao5" name="opcao5">
-            <label class="form-check-label" for="opcao5">Gestão Interna</label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="opcao6" name="opcao6">
-            <label class="form-check-label" for="opcao6">Notícias</label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="opcao7" name="opcao7">
-            <label class="form-check-label" for="opcao5">Redes Sociais</label>
-          </div>
-
-        </div>
-        <h2>Orçamento estimado</h2>
-        <div class="row mb-3">
-          <label for="inputName">É um valor meramente indicativo, pode sofrer alterações</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control mb-5" id="inputName3">
-          </div>
-        </div>
-      </form>
-    </section>
-
-    <!-- Seção Contactos -->
-
-    <section class="contacts" id="contacts">
-      <!-- Mapa -->
-      <h1>Contato</h1>
-
-      <div id="map">
-        <h2>Mapa do Escritório</h2>
-        <img src="images/maps.jfif" alt="Imagem provisória">
-      </div><br>
-      <!-- Formulário de Contato-->
-      <div id="fale_conosco">
-      <h2>Fale Conosco</h2>
-      <form>
-        <label for="nome">Nome:</label> <br>
-        <input type="text class" class="form-control" name="Nome" id="nome" class="imputuser" required> <br>
-
-        <label for="email">Email:</label><br>
-        <input type="email" class="form-control" name="email" id="email" class="imputuser" required><br>
-
-        <label for="telefone">Telefone:</label>
-        <input type="tel" class="form-control" name="telefone" id="telefone" class="imputuser" required> <br>
-        <label for="mensagem">Mensagem</label> <br>
-        <textarea type="text" class="form-control" name="mensagem" id="mensagem" class="imputuser"
-          required></textarea><br>
-
-        <button class="btn btn-outline-dark bg-info" type="submit">Enviar</button>
-
-      </form>
+      </section>
     </div>
-
-    </section>
   </main>
 
   <!-- Rodapé -->
-  <footer class="rodape">
-    <div class="sociais">
-      <button><a href="https://www.instagram.com/bkttlapa/"><i class="fa-brands fa-instagram"></i></a></button>
-      <button><a href="https://twitter.com/bkttlapa"><i class="fa-brands fa-x-twitter"></i></a></button>
-      <button><a href="https://www.youtube.com/@BKttlapa"><i class="fa-brands fa-youtube"></i></a></button>
-    </div>
-
-    <div class="fs-2 text-white">
-      <p class="rodape-criador">Desenvolvido por William Pinheiro</p>
-    </div>
-
-
+  <footer class="fixed-bottom rodape">
+    <p>Desenvolvido por William Pinheiro</p>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

@@ -5,6 +5,35 @@ function exibirAlertaAposTempo(tempo) {
 }
 exibirAlertaAposTempo(5000);
 
+function exibirAlertaSimples() {
+  const extra = 400;
+  var desc = 1;
+  var a = parseFloat(document.getElementById('inputTipoSite').value);
+  var meses = parseFloat(document.getElementById('inputPrazo').value);  
+  var c = $('input[type=checkbox]:checked').length;
+  if (meses == 2) {
+    desc = 0.95;  
+  }
+
+  if (meses == 3) {
+    desc = 0.9;  
+  }
+
+  if (meses == 4) {
+    desc = 0.9;  
+  }
+
+  if (meses == 5) {
+    desc = 0.85;  
+  }
+
+  if (meses > 5) {
+    desc = 0.8;  
+  }
+  var total = (a + (extra * c)) * desc;
+  alert("Valor total: " + total + " €");
+}
+
 
 // EVENTO PARA GERAR UM FEED DE NOTÍCIAS, PEGANDO DADOS DO ARQUIVOS XML EXTERNO
 document.addEventListener("DOMContentLoaded", function () {
@@ -39,39 +68,39 @@ document.addEventListener("DOMContentLoaded", function () {
 // FUNÇÃO GERAR COORDENADAS
 function obterCoordenadas() {
   if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-          function (position) {
-              const latitude = position.coords.latitude;
-              const longitude = position.coords.longitude;
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
 
-              console.log('Latitude:', latitude);
-              console.log('Longitude:', longitude);
+        console.log('Latitude:', latitude);
+        console.log('Longitude:', longitude);
 
-              // Aqui você pode usar as coordenadas conforme necessário
-              // Por exemplo, exibir no mapa usando a API do Google Maps
-              exibirNoMapa(latitude, longitude);
-          },
-          function (error) {
-              console.error('Erro ao obter coordenadas:', error.message);
-          }
-      );
+        // Aqui você pode usar as coordenadas conforme necessário
+        // Por exemplo, exibir no mapa usando a API do Google Maps
+        exibirNoMapa(latitude, longitude);
+      },
+      function (error) {
+        console.error('Erro ao obter coordenadas:', error.message);
+      }
+    );
   } else {
-      console.error('Geolocalização não é suportada neste navegador.');
+    console.error('Geolocalização não é suportada neste navegador.');
   }
 }
 
 function exibirNoMapa(latitude, longitude) {
   const mapOptions = {
-      center: { lat: latitude, lng: longitude },
-      zoom: 15
+    center: { lat: latitude, lng: longitude },
+    zoom: 15
   };
 
   const map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
   const marker = new google.maps.Marker({
-      position: { lat: latitude, lng: longitude },
-      map: map,
-      title: 'Localização Atual'
+    position: { lat: latitude, lng: longitude },
+    map: map,
+    title: 'Localização Atual'
   });
 }
 

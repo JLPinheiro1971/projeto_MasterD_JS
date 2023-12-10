@@ -1,0 +1,27 @@
+/* Média para Mobile*/
+@media only screen and (max-width: 1023px) {
+    .noticia
+    {
+        display: none;
+    }
+
+    }
+
+/* Média para Tablet*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1399px) {
+
+    .noticia{
+        width: 200px;
+    }
+
+}
+
+/* Média para Desktop*/
+
+@media only screen and (min-width: 1400px) {
+
+    .noticia{
+        width: 228px;
+    }
+}
