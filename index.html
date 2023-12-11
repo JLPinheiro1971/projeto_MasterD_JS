@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/responsivo.css">
   <script src="scripts/script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQKOWG8gzDHrPamVg-4KgzviGVcdasSc"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
   <title>Projeto2</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -38,7 +37,10 @@
             <a href="#orcamento">Orçamento</a>
           </li>
           <li>
-            <a href="#contacto">Contato</a>
+            <a href="#mapa">Mapa</a>
+          </li>
+          <li>
+            <a href="#contato">Contato</a>
           </li>
         </ul>
       </div>
@@ -90,21 +92,21 @@
         <form>
           <h2>Dados</h2>
           <div class="row mb-3">
-            <label for="inputName" class="col-sm-2 col-form-label">Nome</label>
+            <label for="orcamentoNome" class="col-sm-2 col-form-label">Nome (*)</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputName3">
+              <input type="text" class="form-control" id="orcamentoNome" required>
             </div>
           </div>
           <div class="row mb-3">
-            <label for="inputSurname" class="col-sm-2 col-form-label">Apelido</label>
+            <label for="orcamentoApelido" class="col-sm-2 col-form-label">Apelido (*)</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputSurname3">
+              <input type="text" class="form-control " id="orcamentoApelido" required>
             </div>
           </div>
           <div class="row mb-3">
-            <label for="inputPhone" class="col-sm-2 col-form-label">Telemóvel</label>
+            <label for="orcamentoTelemovel" class="col-sm-2 col-form-label">Telemóvel (*)</label>
             <div class="col-sm-10">
-              <input type="tel" class="form-control" id="inputPhone3">
+              <input type="tel" class="form-control" id="orcamentoTelemovel" required>
             </div>
           </div>
 
@@ -112,58 +114,60 @@
           <div class="row mb-3">
             <label for="inputTiposite" class="col-sm-2 col-form-label">Tipo de página web:</label>
             <div class="col-sm-10">
-              <select class="form-select" name="inputTipoSite" id="inputTipoSite">
-                <option selected>Escolha o tipo de site</option>
+              <select class="form-select" name="inputTipoSite" id="inputTipoSite" onchange="calcularOrcamento();">
+                <option selected value="0">Escolha o tipo de site</option>
                 <option value="100">Subsite em domínio de terceiros - 100€</option>
-                <option value="200">Site Estático - até 3 páginas  - 200€</option>
-                <option value="300">Site Dinâmico - até 7 páginas  - 300€</option>
-                <option value="500">Sistema de Gestão de Conteúdo  - 500€</option>
-                <option value="1000">Loja Virtual  - 1000€</option>
+                <option value="200">Site Estático - até 3 páginas - 200€</option>
+                <option value="300">Site Dinâmico - até 7 páginas - 300€</option>
+                <option value="500">Sistema de Gestão de Conteúdo - 500€</option>
+                <option value="1000">Loja Virtual - 1000€</option>
               </select>
             </div>
           </div>
           <div class="row mb-3">
-                        <label for="inputPrazo" class="col-sm-2 col-form-label">Prazo em meses:</label>
+            <label for="inputPrazo" class="col-sm-2 col-form-label">Prazo em meses:</label>
             <div class="col-sm-10">
-              <input type="tel" class="form-control" name="inputPrazo" id="inputPrazo">
+              <input type="tel" class="form-control" name="inputPrazo" id="inputPrazo" value="1"
+                onchange="calcularOrcamento();">
             </div>
-            <p>Prazo normal, sem desconto: 1 mês. Atenção: Será concedido 5% de desconto para cada mês extra, até o total de 20% de desconto.</p>
+            <p><strong>Atenção:</strong> <br> 1. O prazo normal para entrega do serviço, sem desconto, é de 1 mês. <br>
+              2. Será concedido 5% de desconto para cada mês extra, até o total de 20% de desconto.</p>
           </div>
           <h2>Marque os itens necessários:</h2>
           <div class="container mt-5">
 
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="opcao1" name="opcao1">
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" id="opcao1" name="opcao1" onchange="calcularOrcamento();">
               <label class="form-check-label" for="opcao1">Quem somos</label>
             </div>
 
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="opcao2" name="opcao2">
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" id="opcao2" name="opcao2" onchange="calcularOrcamento();">
               <label class="form-check-label" for="opcao2">Onde estamos</label>
-            </div>
+            </div> <br>
 
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="opcao3" name="opcao3">
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" id="opcao3" name="opcao3" onchange="calcularOrcamento();">
               <label class="form-check-label" for="opcao3">Galeria de fotografias</label>
             </div>
 
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="opcao4" name="opcao4">
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" id="opcao4" name="opcao4" onchange="calcularOrcamento();">
               <label class="form-check-label" for="opcao4">eCommerce</label>
-            </div>
+            </div> <br>
 
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="opcao5" name="opcao5">
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" id="opcao5" name="opcao5" onchange="calcularOrcamento();">
               <label class="form-check-label" for="opcao5">Gestão Interna</label>
             </div>
 
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="opcao6" name="opcao6">
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" id="opcao6" name="opcao6" onchange="calcularOrcamento();">
               <label class="form-check-label" for="opcao6">Notícias</label>
-            </div>
+            </div> <br>
 
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="opcao7" name="opcao7">
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" id="opcao7" name="opcao7" onchange="calcularOrcamento();">
               <label class="form-check-label" for="opcao5">Redes Sociais</label>
             </div>
             <p>Será acrescentado 400 € para cada item necessário.</p>
@@ -172,44 +176,59 @@
           <div class="row mb-3">
             <label for="inputName">É um valor meramente indicativo, pode sofrer alterações</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control mb-5" id="inputName3">
+              <input type="text" class="form-control mb-5" value="0" id="resultado" disabled="" />
             </div>
           </div>
-          <input type="submit" value="Soma" onclick="exibirAlertaSimples();" />
+          <button class="btn btn-outline-dark bg-info" type="submit" onclick="enviarOrcamento(total);">Enviar pedido de
+            orçamento</button>
         </form>
       </section>
 
       <!-- Seção Contactos -->
 
+      <section class="mapa" id="mapa">
+        <!-- Mapa -->        
+        <br>        
+
+      <h1>Sua rota para o nosso escritório em Lisboa</h1>
+      <p>Localização do escritório: R. de Dona Estefânia 84 - A, 1000-158 Lisboa Portugal</p>
+    <div id="map"></div>
+    <div id="info"></div>    
+          </section>
+
       <section class="contato" id="contato">
-        <!-- Mapa -->
-        <h1>Contato</h1>
+        <h2>Fale Conosco</h2>
 
-        <div id="map">
-          <h2>Mapa do Escritório</h2>
-          <img src="images/maps.jfif" alt="Imagem provisória">
-        </div><br>
         <!-- Formulário de Contato-->
-        <div id="fale_conosco">
-          <h2>Fale Conosco</h2>
-          <form>
-            <label for="nome">Nome:</label> <br>
-            <input type="text class" class="form-control" name="Nome" id="nome" required> <br>
+        <form>
+          <label for="contatoNome">Nome:</label> <br>
+          <input type="text" class="form-control" id="contatoNome" required> <br>
 
-            <label for="email">Email:</label><br>
-            <input type="email" class="form-control" name="email" id="email" required><br>
+          <label for="contatoApelido">Apelido:</label> <br>
+          <input type="text" class="form-control" id="contatoApelido" required> <br>
 
-            <label for="telefone">Telefone:</label>
-            <input type="tel" class="form-control" name="telefone" id="telefone" required> <br>
-            <label for="mensagem">Mensagem</label> <br>
-            <textarea type="text" class="form-control" name="mensagem" id="mensagem" required></textarea><br>
+          <label for="contatoTelemovel">Telemóvel: (formato: 9 dígitos)(*)</label>
+          <input type="tel" class="form-control" id="contatoTelemovel" required> <br>
 
-            <button class="btn btn-outline-dark bg-info" type="submit">Enviar</button>
+          <label for="contatoEmail">Email:</label><br>
+          <input type="email" class="form-control" id="contatoEmail" required><br>
 
-          </form>
-        </div>
+          <label for="contatoData">Data:</label><br>
+          <input type="date" class="form-control" id="contatoData" required><br>
+
+          <label for="contatoMotivo">Motivo do contato</label> <br>
+          <textarea type="text" class="form-control" id="contatoMotivo" required></textarea><br>
+
+          <button class="btn btn-outline-dark bg-info" type="submit" onclick="confirmarPreenchimentoContato();">Enviar
+            mensagem</button>
+
+        </form>
+
+        <br><br><br>
 
       </section>
+
+    </div><br>
     </div>
   </main>
 
@@ -223,6 +242,6 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQKOWG8gzDHrPamVg-4KgzviGVcdasSc&callback=initMap" async defer></script>
 </body>
-
 </html>

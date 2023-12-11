@@ -8,6 +8,7 @@
     --cor-05: #e8efeb;
 }
 
+/*Consertar esta parte!!!!*/
 body {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -59,16 +60,20 @@ grid-area: header;
 }
 
 .noticia a{
-    
-    color: var(--cor-04);
+    color: var(--cor-05);
+    font-size: smaller;
+}
+
+.noticia li {
+    list-style: square;
 }
 
 .principal {
     grid-area: principal;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto auto;    
-    grid-template-areas: "noticia portfolio" "noticia orcamento" "noticia contato";
+    grid-template-rows: auto auto auto auto;    
+    grid-template-areas: "noticia portfolio" "noticia orcamento" "noticia mapa" "noticia contato";
 }
 
 footer {
@@ -98,22 +103,26 @@ footer p {
 }
 
 /* Estilos para a página de contactos */
-.contato {
-    grid-area: contato;
+.mapa {
+    grid-area: mapa;
     background-color: var(--cor-04);
 }
 
+/* Estilos para a página de contatos */
+.contato {
+    grid-area: contato;
+    background-color: var(--cor-05);
+}
 
-/* Estilos específicos para funcionalidades de API externos*/
+/* Estilos para ao mapa*/
+
+#map {
+    height: 400px;
+    width: 100%;
+}
 
 #caixa {
     width: 100%;
     height: auto;
     position: relative;
     border: 1px solid cadetblue;
-}
-
-#map {
-    height: 200px;
-    width: 50%;    
-}
