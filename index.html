@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/responsivo.css">
   <script src="scripts/script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <title>Projeto2</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
 </head>
 
 <body id="home">
@@ -57,10 +57,9 @@
       <br><br>
       <h1>Notícias</h1>
       <ul id="noticias-lista"></ul>
-
     </aside>
 
-    <!-- Div Central, que engloba as 3 seções do miolo da estrutura -->
+    <!-- Div Central, que engloba as 4 seções do miolo da estrutura -->
 
     <div class="central">
 
@@ -68,20 +67,50 @@
       <section class="portfolio" id="portfolio">
         <br><br>
         <h1 class="ml-3">Portfólio</h1>
-        <div>
+        <div class="galeria">
 
-          <a href="images/site1.jpg" data-lightbox="minha-galeria" data-title="Imagem 1">
-            <img src="images/site1thumb.jpg" alt="Imagem 1">
-          </a>
-          <a href="images/site2.jpg" data-lightbox="minha-galeria" data-title="Imagem 2">
-            <img src="images/site2thumb.jpg" alt="Imagem 2">
-          </a>
-          <a href="images/site3.jpg" data-lightbox="minha-galeria" data-title="Imagem 3">
-            <img src="images/site3thumb.jpg" alt="Imagem 3">
-          </a>
-          <a href="images/site4.jpg" data-lightbox="minha-galeria" data-title="Imagem 4">
-            <img src="images/site4thumb.jpg" alt="Imagem 4">
-          </a>
+          <div class="row">
+            <!-- Item da galeria 1 -->
+            <div class="col-lg-2 col-md-6 portfolio-item">
+              <a href="images/site1.jpg" data-lightbox="portfolio" data-title="Subsite em domínio de terceiros">
+                <img src="images/site1thumb.jpg" class="img-fluid" alt="Tipo 1">
+              </a>
+              <span class="rotulo fs-6 fw-bold">Subsite em domínio de terceiros</span>
+            </div>
+
+            <!-- Item da galeria 2 -->
+            <div class="col-lg-2 col-md-6 portfolio-item">
+              <a href="images/site2.jpg" data-lightbox="portfolio" data-title="Site Estático - até 3 páginas">
+                <img src="images/site2thumb.jpg" class="img-fluid" alt="Tipo 2">
+              </a>
+              <span class="rotulo fs-6 fw-bold">Site Estático - até 3 páginas</span>
+            </div>
+
+            <!-- Item da galeria 3 -->
+            <div class="col-lg-2 col-md-6 portfolio-item">
+              <a href="images/site3.jpg" data-lightbox="portfolio" data-title="Site Dinâmico - até 7 páginas">
+                <img src="images/site3thumb.jpg" class="img-fluid" alt="Tipo 3">
+              </a>
+              <span class="rotulo fs-6 fw-bold">Site Dinâmico - até 7 páginas</span>
+            </div>
+
+            <!-- Item da galeria 4 -->
+            <div class="col-lg-2 col-md-6 portfolio-item">
+              <a href="images/site4.jpg" data-lightbox="portfolio" data-title="Sistema de Gestão de Conteúdo">
+                <img src="images/site4thumb.jpg" class="img-fluid" alt="Tipo 4">
+              </a>
+              <span class="rotulo fs-6 fw-bold">Sistema de Gestão de Conteúdo</span>
+            </div>
+
+            <!-- Item da galeria 5 -->
+            <div class="col-lg-2 col-md-6 portfolio-item">
+              <a href="images/site5.jpg" data-lightbox="portfolio" data-title="Loja Virtual">
+                <img src="images/site5thumb.jpg" class="img-fluid" alt="Tipo 5">
+              </a>
+              <span class="rotulo fs-6 fw-bold">Loja Virtual</span>
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -89,22 +118,22 @@
 
       <section class="orcamento" id="orcamento">
         <h1>Orçamento do Projeto</h1>
-        <form>
+        <form class="mb-2 p-2">
           <h2>Dados</h2>
           <div class="row mb-3">
-            <label for="orcamentoNome" class="col-sm-2 col-form-label">Nome (*)</label>
+            <label for="orcamentoNome" class="col-sm-2 col-form-label">Nome: (*)</label>
             <div class="col-sm-10">
               <input type="text" class="form-control" id="orcamentoNome" required>
             </div>
           </div>
           <div class="row mb-3">
-            <label for="orcamentoApelido" class="col-sm-2 col-form-label">Apelido (*)</label>
+            <label for="orcamentoApelido" class="col-sm-2 col-form-label">Apelido: (*)</label>
             <div class="col-sm-10">
               <input type="text" class="form-control " id="orcamentoApelido" required>
             </div>
           </div>
           <div class="row mb-3">
-            <label for="orcamentoTelemovel" class="col-sm-2 col-form-label">Telemóvel (*)</label>
+            <label for="orcamentoTelemovel" class="col-sm-2 col-form-label">Telemóvel: (*)</label>
             <div class="col-sm-10">
               <input type="tel" class="form-control" id="orcamentoTelemovel" required>
             </div>
@@ -174,57 +203,87 @@
           </div>
           <h2>Orçamento estimado</h2>
           <div class="row mb-3">
-            <label for="inputName">É um valor meramente indicativo, pode sofrer alterações</label>
+            <span class="text-white">(É um valor meramente indicativo, pode sofrer alterações)</span>
+
+            <label for="resultado" class="col-sm-2 col-form-label">Valor com desconto:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control mb-5" value="0" id="resultado" disabled="" />
+              <input type="text" class="form-control mb-5" value="0" id="resultado" disabled>
             </div>
           </div>
-          <button class="btn btn-outline-dark bg-info" type="submit" onclick="enviarOrcamento(total);">Enviar pedido de
-            orçamento</button>
+          <div class="d-grid gap-2 col-3 mx-auto">
+            <button class="btn btn-outline-dark bg-primary" type="submit" onclick="enviarOrcamento();">Enviar pedido de
+              orçamento</button>
+          </div>
         </form>
       </section>
 
       <!-- Seção Contactos -->
 
       <section class="mapa" id="mapa">
-        <!-- Mapa -->        
-        <br>        
+        <!-- Mapa -->
+        <br>
 
-      <h1>Sua rota para o nosso escritório em Lisboa</h1>
-      <p>Localização do escritório: R. de Dona Estefânia 84 - A, 1000-158 Lisboa Portugal</p>
-    <div id="map"></div>
-    <div id="info"></div>    
-          </section>
+        <h1>Nosso escritório</h1>
+        <span class="rotulo fs-6 fw-bold">Morada: </span>
+        <span>R. de Dona Estefânia 84 - A, 1000-158 Lisboa Portugal</span><br>
+        <span class="rotulo fs-6 fw-bold">Email: </span>
+        <a href="mailto: contato@nossoescritorio.pt">contato@nossoescritorio.pt</a><br>
+        <span class="rotulo fs-6 fw-bold">Atenção: </span>
+        <span>Atualize a página para calcular a rota, a distância e o tempo de deslocamento.</span><br>
+        <div id="map"></div>
+        <div id="info"></div>
+      </section>
 
-      <section class="contato" id="contato">
+      <section class="mb-2 p-2 contato" id="contato">
         <h2>Fale Conosco</h2>
 
         <!-- Formulário de Contato-->
-        <form>
-          <label for="contatoNome">Nome:</label> <br>
-          <input type="text" class="form-control" id="contatoNome" required> <br>
-
-          <label for="contatoApelido">Apelido:</label> <br>
-          <input type="text" class="form-control" id="contatoApelido" required> <br>
-
-          <label for="contatoTelemovel">Telemóvel: (formato: 9 dígitos)(*)</label>
-          <input type="tel" class="form-control" id="contatoTelemovel" required> <br>
-
-          <label for="contatoEmail">Email:</label><br>
-          <input type="email" class="form-control" id="contatoEmail" required><br>
-
-          <label for="contatoData">Data:</label><br>
-          <input type="date" class="form-control" id="contatoData" required><br>
-
-          <label for="contatoMotivo">Motivo do contato</label> <br>
-          <textarea type="text" class="form-control" id="contatoMotivo" required></textarea><br>
-
-          <button class="btn btn-outline-dark bg-info" type="submit" onclick="confirmarPreenchimentoContato();">Enviar
-            mensagem</button>
-
+        <form class="mb-2 p-2" id="formContato">
+          <div class="row mb-3">
+            <label for="contatoNome" class="col-sm-2 col-form-label">Nome:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="contatoNome" oninput="validarCampoNome()">
+            </div>
+            <span id="nomeErro" class="error"></span>
+          </div>
+          <div class="row mb-3">
+            <label for="contatoApelido" class="col-sm-2 col-form-label">Apelido:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="contatoApelido" oninput="validarCampoApelido()">
+            </div>
+            <span id="apelidoErro" class="error"></span>
+          </div>
+          <div class="row mb-3">
+            <label for="contatoTelemovel" class="col-sm-2 col-form-label">Telemóvel:</label>
+            <div class="col-sm-10">
+              <input type="tel" class="form-control" id="contatoTelemovel" oninput="validarCampoTelemovel()">
+            </div>
+            <span id="telemovelErro" class="error"></span>
+          </div>
+          <div class="row mb-3">
+            <label for="contatoEmail" class="col-sm-2 col-form-label">Email:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="contatoEmail" oninput="validarEmail()">
+            </div>
+            <span id="emailErro" class="error"></span>
+          </div>
+          <div class="row mb-3">
+            <label for="contatoData" class="col-sm-2 col-form-label">Data:</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="contatoData" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="contatoMotivo" class="col-sm-2 col-form-label">Motivo:</label>
+            <div class="col-sm-10">
+              <textarea type="email" class="form-control" id="contatoMotivo" rows="5" required> </textarea>
+            </div>
+          </div>
+          <div class="d-grid gap-2 col-3 mx-auto">
+            <button class="btn btn-outline-dark bg-primary" type="submit"
+              onclick="confirmarPreenchimentoContato();">Enviar mensagem</button>
+          </div>
         </form>
-
-        <br><br><br>
 
       </section>
 
@@ -242,6 +301,8 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQKOWG8gzDHrPamVg-4KgzviGVcdasSc&callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqQKOWG8gzDHrPamVg-4KgzviGVcdasSc&callback=initMap"
+    async defer></script>
 </body>
+
 </html>

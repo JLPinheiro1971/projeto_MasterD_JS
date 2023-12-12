@@ -54,7 +54,7 @@ function enviarOrcamento() {
   var orcamentoTelemovel = document.getElementById('orcamentoTelemovel').value;
   var orcamentoValor = document.getElementById('resultado').value;
   if (orcamentoNome == '' || orcamentoApelido == '' || orcamentoTelemovel == '') {
-    alert("Os Dados Pessoais precisam estar preenchidos.");
+    alert("Todos os dados pessoais devem ser preenchidos.");
   } else if (orcamentoValor == 0) {
     alert('Preencha as informações do pedido de orçamento e itens necessários. Por favor, tente novamente.');
   } else {
@@ -169,3 +169,124 @@ document.addEventListener("DOMContentLoaded", function () {
                   break;
           }
       }
+
+// SCRIPT PARA VALIDAR CAMPO NOME
+      function validarCampoNome() {
+        var nomeInput = document.getElementById("contatoNome");
+        var nomeErro = document.getElementById("nomeErro");
+        var nome = nomeInput.value.trim();
+  
+        // Expressão regular para validar caracteres alfabéticos
+        var regexNome = /^[a-zA-Z]+$/;
+  
+        // Verificar se o comprimento está entre 3 e 30 caracteres
+        if (nome.length < 3 || nome.length > 30) {
+          nomeErro.textContent = "O nome deve ter entre 3 e 30 caracteres.";
+          nomeInput.setCustomValidity("invalid");
+        } else if (!regexNome.test(nome)) {
+          nomeErro.textContent = "Por favor, use apenas caracteres alfabéticos.";
+          nomeInput.setCustomValidity("invalid");
+        } else {
+          nomeErro.textContent = "";
+          nomeInput.setCustomValidity("");
+        }
+      }
+  
+      // Adicionar um ouvinte de evento para validar o campo ao enviar o formulário
+      document.getElementById("formContato").addEventListener("submit", function(event) {
+        var nomeInput = document.getElementById("nome");
+        validarCampo();
+        if (nomeInput.checkValidity() === false) {
+          event.preventDefault(); // Impedir o envio do formulário se a validação falhar
+        }
+      });
+
+      // SCRIPT PARA VALIDAR CAMPO APELIDO
+      function validarCampoApelido() {
+        var apelidoInput = document.getElementById("contatoApelido");
+        var apelidoErro = document.getElementById("apelidoErro");
+        var apelido = apelidoInput.value.trim();
+  
+        // Expressão regular para validar caracteres alfabéticos
+        var regexApelido = /^[a-zA-Z]+$/;
+  
+        // Verificar se o comprimento está entre 2 e 50 caracteres
+        if (apelido.length < 2 || apelido.length > 50) {
+          apelidoErro.textContent = "O nome deve ter entre 2 e 50 caracteres.";
+          apelidoInput.setCustomValidity("invalid");
+        } else if (!regexApelido.test(apelido)) {
+          apelidoErro.textContent = "Por favor, use apenas caracteres alfabéticos.";
+          apelidoInput.setCustomValidity("invalid");
+        } else {
+          apelidoErro.textContent = "";
+          apelidoInput.setCustomValidity("");
+        }
+      }
+  
+      // Adicionar um ouvinte de evento para validar o campo ao enviar o formulário
+      document.getElementById("formContato").addEventListener("submit", function(event) {
+        var apelidoInput = document.getElementById("apelido");
+        validarCampoApelido();
+        if (apelidoInput.checkValidity() === false) {
+          event.preventDefault(); // Impedir o envio do formulário se a validação falhar
+        }
+      });          
+
+       // SCRIPT PARA VALIDAR CAMPO TELEMÓVEL
+       function validarCampoTelemovel() {
+        var telemovelInput = document.getElementById("contatoTelemovel");
+        var telemovelErro = document.getElementById("telemovelErro");
+        var telemovel = telemovelInput.value.trim();
+  
+        // Expressão regular para validar caracteres alfabéticos
+        var regexTelemovel = /^[0-9]+$/;
+  
+        // Verificar se o comprimento está entre 9 e 9 caracteres
+        if (telemovel.length != 9) {
+          telemovelErro.textContent = "O número do telemóvel deve ter 9 dígitos.";
+          telemovelInput.setCustomValidity("invalid");
+        } else if (!regexTelemovel.test(telemovel)) {
+          telemovelErro.textContent = "Por favor, use apenas caracteres numéricos.";
+          telemovelInput.setCustomValidity("invalid");
+        } else {
+          telemovelErro.textContent = "";
+          telemovelInput.setCustomValidity("");
+        }
+      }
+  
+      // Adicionar um ouvinte de evento para validar o campo ao enviar o formulário
+      document.getElementById("formContato").addEventListener("submit", function(event) {
+        var telemovelInput = document.getElementById("telemovel");
+        validarCampoTelemovel();
+        if (telemovelInput.checkValidity() === false) {
+          event.preventDefault(); // Impedir o envio do formulário se a validação falhar
+        }
+      });
+      
+      
+// SCRIPT PARA VALIDAR CAMPO EMAIL
+    function validarEmail() {
+      var emailInput = document.getElementById("contatoEmail");
+      var emailErro = document.getElementById("emailErro");
+      var email = emailInput.value.trim();
+
+      // Expressão regular para validar o formato de e-mail
+      var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+      if (!regexEmail.test(email)) {
+        emailErro.textContent = "Por favor, insira um endereço de email válido.";
+        emailInput.setCustomValidity("invalid");
+      } else {
+        emailErro.textContent = "";
+        emailInput.setCustomValidity("");
+      }
+    }
+
+    // Adicionar um ouvinte de evento para validar o campo ao enviar o formulário
+    document.getElementById("formContato").addEventListener("submit", function(event) {
+      var emailInput = document.getElementById("email");
+      validarEmail();
+      if (emailInput.checkValidity() === false) {
+        event.preventDefault(); // Impedir o envio do formulário se a validação falhar
+      }
+    });

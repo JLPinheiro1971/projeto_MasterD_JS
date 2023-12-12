@@ -11,9 +11,9 @@
 /*Consertar esta parte!!!!*/
 body {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto;
     grid-template-rows: "auto auto 1fr";
-    grid-template-areas: "cabecalho cabecalho" "principal principal" "rodape rodape";
+    grid-template-areas: "cabecalho" "principal" "rodape";
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;    
@@ -95,6 +95,27 @@ footer p {
     color: var(--cor-03):
 }
 
+.portfolio-item {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+.galeria {    
+    display: flex;    
+}
+
+.row {    
+    justify-content: space-evenly;
+}
+
+.rotulo {
+    color: var(--cor-01);
+    justify-content: center;
+    text-align: justify;
+}
+
+
 /* Estilos para o formulário de orçamento */
 .orcamento {
     grid-area: orcamento;
@@ -114,15 +135,13 @@ footer p {
     background-color: var(--cor-05);
 }
 
+.error {
+    color: red;
+}
+
 /* Estilos para ao mapa*/
 
 #map {
     height: 400px;
     width: 100%;
 }
-
-#caixa {
-    width: 100%;
-    height: auto;
-    position: relative;
-    border: 1px solid cadetblue;
