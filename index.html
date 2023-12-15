@@ -18,10 +18,9 @@
 
 <body id="home">
 
-  <!-- Cabeçalho -->
 
   <header>
-    <nav class="fixed-top cabecalho">
+    <nav class="fixed-top cabecalho mx-auto">
       <div>
         <ul>
           <li>
@@ -47,30 +46,25 @@
     </nav>
   </header>
 
-  <!-- Seção Principal -->
 
   <main class="principal">
 
-    <!-- Menu Lateral -->
 
     <aside class="noticia" id="noticia">
       <br><br>
-      <h1>Notícias</h1>
+      <h1 class="ms-3">Notícias</h1>
       <ul id="noticias-lista"></ul>
     </aside>
 
-    <!-- Div Central, que engloba as 4 seções do miolo da estrutura -->
-
     <div class="central">
 
-      <!-- Seção de Galeria de Portfólios -->
       <section class="portfolio" id="portfolio">
         <br><br>
-        <h1 class="ml-3">Portfólio</h1>
+        <h1 class="text-center my-3 my-xl-">Portfólio</h1>
         <div class="galeria">
 
           <div class="row">
-            <!-- Item da galeria 1 -->
+
             <div class="col-lg-2 col-md-6 portfolio-item">
               <a href="images/site1.jpg" data-lightbox="portfolio" data-title="Subsite em domínio de terceiros">
                 <img src="images/site1thumb.jpg" class="img-fluid" alt="Tipo 1">
@@ -78,7 +72,7 @@
               <span class="rotulo fs-6 fw-bold">Subsite em domínio de terceiros</span>
             </div>
 
-            <!-- Item da galeria 2 -->
+
             <div class="col-lg-2 col-md-6 portfolio-item">
               <a href="images/site2.jpg" data-lightbox="portfolio" data-title="Site Estático - até 3 páginas">
                 <img src="images/site2thumb.jpg" class="img-fluid" alt="Tipo 2">
@@ -86,7 +80,7 @@
               <span class="rotulo fs-6 fw-bold">Site Estático - até 3 páginas</span>
             </div>
 
-            <!-- Item da galeria 3 -->
+
             <div class="col-lg-2 col-md-6 portfolio-item">
               <a href="images/site3.jpg" data-lightbox="portfolio" data-title="Site Dinâmico - até 7 páginas">
                 <img src="images/site3thumb.jpg" class="img-fluid" alt="Tipo 3">
@@ -94,7 +88,7 @@
               <span class="rotulo fs-6 fw-bold">Site Dinâmico - até 7 páginas</span>
             </div>
 
-            <!-- Item da galeria 4 -->
+
             <div class="col-lg-2 col-md-6 portfolio-item">
               <a href="images/site4.jpg" data-lightbox="portfolio" data-title="Sistema de Gestão de Conteúdo">
                 <img src="images/site4thumb.jpg" class="img-fluid" alt="Tipo 4">
@@ -102,7 +96,7 @@
               <span class="rotulo fs-6 fw-bold">Sistema de Gestão de Conteúdo</span>
             </div>
 
-            <!-- Item da galeria 5 -->
+
             <div class="col-lg-2 col-md-6 portfolio-item">
               <a href="images/site5.jpg" data-lightbox="portfolio" data-title="Loja Virtual">
                 <img src="images/site5thumb.jpg" class="img-fluid" alt="Tipo 5">
@@ -114,10 +108,10 @@
         </div>
       </section>
 
-      <!-- Seção de Pedido de Orçamento -->
+
 
       <section class="orcamento" id="orcamento">
-        <h1>Orçamento do Projeto</h1>
+        <h1 class="text-center mt-1">Orçamento do Projeto</h1>
         <form class="mb-2 p-2">
           <h2>Dados</h2>
           <div class="row mb-3">
@@ -199,7 +193,7 @@
               <input type="checkbox" class="form-check-input" id="opcao7" name="opcao7" onchange="calcularOrcamento();">
               <label class="form-check-label" for="opcao5">Redes Sociais</label>
             </div>
-            <p>Será acrescentado 400 € para cada item necessário.</p>
+            <p>*Será acrescentado 400 € para cada item necessário.*</p>
           </div>
           <h2>Orçamento estimado</h2>
           <div class="row mb-3">
@@ -217,69 +211,81 @@
         </form>
       </section>
 
-      <!-- Seção Contactos -->
+
 
       <section class="mapa" id="mapa">
-        <!-- Mapa -->
+
         <br>
 
-        <h1>Nosso escritório</h1>
-        <span class="rotulo fs-6 fw-bold">Morada: </span>
+        <h1 class="text-center pb-5">Nosso escritório</h1>
+        <span class="rotulo fs-6 fw-bold p mx-xl-2">Morada: </span>
         <span>R. de Dona Estefânia 84 - A, 1000-158 Lisboa Portugal</span><br>
-        <span class="rotulo fs-6 fw-bold">Email: </span>
+        <span class="rotulo fs-6 fw-bold mx-xl-2">Email: </span>
         <a href="mailto: contato@nossoescritorio.pt">contato@nossoescritorio.pt</a><br>
-        <span class="rotulo fs-6 fw-bold">Atenção: </span>
+        <span class="rotulo fs-6 fw-bold mx-xl-2">Atenção: </span>
         <span>Atualize a página para calcular a rota, a distância e o tempo de deslocamento.</span><br>
         <div id="map"></div>
         <div id="info"></div>
       </section>
 
       <section class="mb-2 p-2 contato" id="contato">
-        <h2>Fale Conosco</h2>
+        <h1 class="text-center mt-3">Fale Conosco</h1>
 
-        <!-- Formulário de Contato-->
+
         <form class="mb-2 p-2" id="formContato">
           <div class="row mb-3">
-            <label for="contatoNome" class="col-sm-2 col-form-label">Nome:</label>
+            <label for="contatoNome" class="col-sm-2 col-form-label">
+              <h5>Nome:</h5>
+            </label>
             <div class="col-sm-10">
               <input type="text" class="form-control" id="contatoNome" oninput="validarCampoNome()">
             </div>
             <span id="nomeErro" class="error"></span>
           </div>
           <div class="row mb-3">
-            <label for="contatoApelido" class="col-sm-2 col-form-label">Apelido:</label>
+            <label for="contatoApelido" class="col-sm-2 col-form-label">
+              <h5>Apelido:</h5>
+            </label>
             <div class="col-sm-10">
               <input type="text" class="form-control" id="contatoApelido" oninput="validarCampoApelido()">
             </div>
             <span id="apelidoErro" class="error"></span>
           </div>
           <div class="row mb-3">
-            <label for="contatoTelemovel" class="col-sm-2 col-form-label">Telemóvel:</label>
+            <label for="contatoTelemovel" class="col-sm-2 col-form-label">
+              <h5>Telemóvel:</h5>
+            </label>
             <div class="col-sm-10">
               <input type="tel" class="form-control" id="contatoTelemovel" oninput="validarCampoTelemovel()">
             </div>
             <span id="telemovelErro" class="error"></span>
           </div>
           <div class="row mb-3">
-            <label for="contatoEmail" class="col-sm-2 col-form-label">Email:</label>
+            <label for="contatoEmail" class="col-sm-2 col-form-label">
+              <h5>Email:</h5>
+            </label>
             <div class="col-sm-10">
               <input type="email" class="form-control" id="contatoEmail" oninput="validarEmail()">
             </div>
             <span id="emailErro" class="error"></span>
           </div>
           <div class="row mb-3">
-            <label for="contatoData" class="col-sm-2 col-form-label">Data:</label>
+            <label for="contatoData" class="col-sm-2 col-form-label">
+              <h5>Data:</h5>
+            </label>
             <div class="col-sm-10">
               <input type="date" class="form-control" id="contatoData" required>
             </div>
           </div>
           <div class="row mb-3">
-            <label for="contatoMotivo" class="col-sm-2 col-form-label">Motivo:</label>
+            <label for="contatoMotivo" class="col-sm-2 col-form-label">
+              <h5>Motivo:</h5>
+            </label>
             <div class="col-sm-10">
               <textarea type="email" class="form-control" id="contatoMotivo" rows="5" required> </textarea>
             </div>
           </div>
-          <div class="d-grid gap-2 col-3 mx-auto">
+          <div class="d-grid gap-2 col-3 mx-auto mb-3">
             <button class="btn btn-outline-dark bg-primary" type="submit"
               onclick="confirmarPreenchimentoContato();">Enviar mensagem</button>
           </div>
@@ -291,8 +297,8 @@
     </div>
   </main>
 
-  <!-- Rodapé -->
-  <footer class="fixed-bottom rodape">
+
+  <footer class="fixed-bottom rodape ">
     <p>Desenvolvido por William Pinheiro</p>
   </footer>
 

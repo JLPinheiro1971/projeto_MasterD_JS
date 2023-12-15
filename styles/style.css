@@ -1,14 +1,12 @@
-/* Estilos gerais */
-
 :root {
-    --cor-01: #1d090e;
-    --cor-02: #612a36;
-    --cor-03: #271f9c;
-    --cor-04: #20dad5;
-    --cor-05: #e8efeb;
+    --cor-01: #0A0C0E;
+    --cor-02: #8DAAC2;
+    --cor-03: #FFB200;
+    --cor-04: #e8efeb;
+
 }
 
-/*Consertar esta parte!!!!*/
+
 body {
     display: grid;
     grid-template-columns: auto;
@@ -16,18 +14,20 @@ body {
     grid-template-areas: "cabecalho" "principal" "rodape";
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;    
+    padding: 0;
 }
 
-/* Estilos para o Menu*/
+
 
 header {
-    width: 100%;    
+    width: 100%;
 }
 
-nav{
-    background-color: var(--cor-01);    
-    }
+nav {
+    display: flex;
+    background-color: var(--cor-01);
+    justify-content: center;
+}
 
 nav ul {
     list-style: none;
@@ -39,57 +39,65 @@ nav ul {
 
 nav li {
     margin-right: 20px;
-    
+
 }
 
 nav a {
-    text-decoration:none;
+    text-decoration: none;
     font-size: 24px;
-    color: var(--cor-05);
+    color: var(--cor-04);
 }
 
 
-/* Classes de estilos para cada bloco do Grid */
-.cabecalho{
-grid-area: header;
+
+.cabecalho {
+    grid-area: header;
 }
 
-.noticia{
+.noticia {
     grid-area: noticia;
     background-color: var(--cor-02);
 }
 
-.noticia a{
+.noticia a {
     color: var(--cor-05);
     font-size: smaller;
+    text-decoration: none;
 }
 
 .noticia li {
     list-style: square;
+    text-decoration: none;
+    margin-right: 50px;
+    margin-top: 10px;
 }
 
 .principal {
     grid-area: principal;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto auto auto;    
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: "noticia portfolio" "noticia orcamento" "noticia mapa" "noticia contato";
+    background-color: var(--cor-04);
 }
 
 footer {
     grid-area: rodape;
     background-color: var(--cor-01);
     width: 100%;
-    font-size: 24px;
+    font-size: 20px;
+
 }
 
 footer p {
-    color: var(--cor-05);
+    color: var(--cor-04);
     text-align: center;
+    margin-top: 10px;
+
 }
 
-/* Estilos para a galeria de portfólio */
-.portfolio {    
+
+.portfolio {
     grid-area: portfolio;
     background-color: var(--cor-05);
     color: var(--cor-03):
@@ -99,13 +107,13 @@ footer p {
     margin-bottom: 5px;
     display: flex;
     flex-direction: column;
-  }
-
-.galeria {    
-    display: flex;    
 }
 
-.row {    
+.galeria {
+    display: flex;
+}
+
+.row {
     justify-content: space-evenly;
 }
 
@@ -116,20 +124,20 @@ footer p {
 }
 
 
-/* Estilos para o formulário de orçamento */
+
 .orcamento {
     grid-area: orcamento;
     background-color: var(--cor-03);
-    color: var(--cor-04);
+    color: var(--cor-01);
 }
 
-/* Estilos para a página de contactos */
+
 .mapa {
     grid-area: mapa;
     background-color: var(--cor-04);
 }
 
-/* Estilos para a página de contatos */
+
 .contato {
     grid-area: contato;
     background-color: var(--cor-05);
@@ -139,7 +147,7 @@ footer p {
     color: red;
 }
 
-/* Estilos para ao mapa*/
+
 
 #map {
     height: 400px;
